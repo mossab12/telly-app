@@ -33,6 +33,14 @@ public class UserController {
 		return "loggedout";
 	}	
 
+	@RequestMapping("/createaccount")
+	public String createAccount(Model model, Principal principal) {
+		
+		model.addAttribute("user", new User());
+		
+		return "createaccount";
+	}
+
 
 }
 
